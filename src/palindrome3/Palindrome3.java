@@ -1,7 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Evan Robertson
+ * February 24 2020
+ * Palindrome3.java
+ * This program takes any sentence and reverses it to check if the entire sentence
+ * is a palindrome
  */
 
 package palindrome3;
@@ -21,13 +23,10 @@ public class Palindrome3 {
         String palindrome = JOptionPane.showInputDialog("Enter a word to check");
         char[] arr = new char[palindrome.length()];
         for(int i = 0; i < palindrome.length(); i++){
-            if (palindrome.charAt(i) == ' ') {
-                System.out.println("Hi");
-            } else {
+            if (palindrome.charAt(i) != ' ') {
                 arr[i] = palindrome.charAt(i);
-                
-            }
-            
+            } else {
+            } 
         }
         System.out.println(arr);
         String newString = "";
@@ -38,12 +37,14 @@ public class Palindrome3 {
             oldString = oldString + arr[i];
             System.out.println(oldString);
         }
-        if (oldString.equals(newString)) {
-            JOptionPane.showMessageDialog(null, "Your word: " + palindrome + ", "
+        System.out.println(newString);
+        System.out.println(oldString);
+        if (newString.equals(oldString)) {
+            JOptionPane.showMessageDialog(null, "Your word(s): " + palindrome + ", "
                     + "is the same when reversed and is therefore a palindrome");
         }
         else {
-            JOptionPane.showMessageDialog(null, "Your word: " + palindrome + ", "
+            JOptionPane.showMessageDialog(null, "Your word(s): " + palindrome + ", "
                     + "is not the same when reversed and is therefore is not a palindrome");
         }
     }
